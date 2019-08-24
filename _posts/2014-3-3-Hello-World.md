@@ -1,6 +1,7 @@
 ---
 layout: post
 title: You're up and running!
+categories: [Misc, TLDR]
 mainimage: /images/config.png
 ---
 
