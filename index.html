@@ -17,7 +17,7 @@ layout: default
 												<a href="#">11 comments</a>
 											</span>
 					  <span class="date-type">
-												<i class="fa fa-calendar"></i>{{ post.date | date: "%B %e, %Y" }}
+												<i class="fa fa-calendar"></i>{{ post.date | date: "%e %B %Y" }}
 											</span>
 					</div>
 					<div class="blog-text">
@@ -25,7 +25,7 @@ layout: default
 												<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 											</h4>
 					  <p>
-						{{ post.excerpt | truncatewords:20 }} ...
+						{{ post.excerpt | truncatewords:50 }}
 					  </p>
 					</div>
 					<span>
