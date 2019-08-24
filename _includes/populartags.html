@@ -4,11 +4,11 @@
                   <h4>popular tags</h4>
                   <ul>	  
 <!-- assign alltags = site.note | map:'tags' | join:',' | split:',' | group_by:'tag' -->
-{% for tag in site.tags %}
+<!-- for tag in site.tags -->
                     <li>
                       <a href="#">{{ tag.name }} ({{ tag.size }})</a>
                     </li>
-{% end for %}
+<!-- end for -->
                   </ul>
                 </div>
               </div>
