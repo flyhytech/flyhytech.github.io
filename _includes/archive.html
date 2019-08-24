@@ -1,0 +1,18 @@
+<div class="single-blog-page">
+              <div class="left-blog">
+                <h4>archive</h4>
+                <ul>
+{% for post in site.posts %}
+ {% assign currentmonth = post.date | date: "%B %Y" %}
+ {% assign previousmonth = post.previous.date | date: "%B %Y" %}
+ {% assign counter = counter | plus: 1 %}
+  {% if currentmonth != previousmonth %}
+                 <li>
+                    <a href="#">{{ currentmonth }} ({{ counter }})</a>
+                  </li>
+   {% assign counter = 0 %}
+  {% endif %}
+{% endfor %}
+                </ul>
+              </div>
+            </div>
