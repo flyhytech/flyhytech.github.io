@@ -9,20 +9,14 @@
   {% assign tag_with_size = pre_processed_tag | split: ' ' %}
   {% assign key = tag_with_size[1] %}
   {% assign tag = site.tags[key] %}
-  {% unless forloop.first %}</ul>{% endunless %}
   {% if tag.size > 0 %}
     {% assign thetag = site.my_tags | where: "slug", key %}
     {% assign thetag = thetag[0] %}
                     <li>
-                      <a href="#">{{ thetag_titlel }} ({{ tag.size }})</a>
+                      <a href="#">{{ thetag.title }} ({{ tag.size }})</a>
                     </li>
   {% endif %}
 {% endfor %}
-<!--
-                    <li>
-                      <a href="#">empty</a>
-                    </li>
--->
                   </ul>
                 </div>
               </div>
