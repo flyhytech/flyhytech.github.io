@@ -1,0 +1,23 @@
+<div class="single-blog-page">
+              <!-- recent start -->
+              <div class="left-blog">
+                <h4>recent post</h4>
+                <div class="recent-post">
+                {% for post in site.posts limit:5 %}
+                  <!-- start single post -->
+                  <div class="recent-single-post">
+                    <div class="post-img">
+                      <a href="{{ site.baseurl }}{{ post.url }}">
+						<img src="{{ post.mainimage }}" alt="">
+					  </a>
+                    </div>
+                    <div class="pst-content">
+                      <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+                    </div>
+                  </div>
+                  <!-- End single post -->
+                {% endfor %}
+                </div>
+              </div>
+              <!-- recent end -->
+            </div>
