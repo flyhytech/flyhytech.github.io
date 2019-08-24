@@ -2,7 +2,7 @@
 layout: post
 title: You're up and running!
 categories: [Misc, TLDR]
-mainimage: /images/config.png
+mainimage: /images/posts/config.png
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).

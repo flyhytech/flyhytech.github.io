@@ -3,7 +3,7 @@ layout: post
 title: Who in the News can you trust?
 tags: [Politics, News, Journalism]
 categories: [Misc, TLDR]
-mainimage: /images/tv-screen-wall.jpg
+mainimage: /images/posts/tv-screen-wall.jpg
 ---
 
 I started taking an interest in politics and the news during the American presidential campaign in 2015/16. Before that I did not consider politics and economics to be relevant in my life at all. I guess I was just too busy, trying to figure out other parts of my life, because now it is apparent to me what a large impact political issues have on me and society around me.

@@ -3,7 +3,7 @@ layout: post
 title: Is Libertarianism possible or pure fiction?
 tags: [Politics, Economics, Libertarianism]
 categories: TLDR
-mainimage: /images/adamSmith.jpg
+mainimage: /images/posts/adamSmith.jpg
 ---
 
 

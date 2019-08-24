@@ -3,7 +3,7 @@ layout: post
 title: Exponential Prime Factor Trees
 tags: [Mathematics, Number Theory, Prime Numbers]
 categories: Misc
-mainimage: /images/zeta_polar.png
+mainimage: /images/posts/zeta_polar.png
 ---
 
 We usually think of the **natural numbers** 1, 2, 3, ... as elements on a straight line that extends infinitely. That is, the relationship between 2 and 3 is the same as between 3 and 4 and so on: they have the same distance between them. In the case of a distance of 1 we might call them neighbours. This perspective focuses on the linearity and additivity of numbers: the linear distance from one number to another number can be expressed as a number. Human thinking is intuitively linear in many situations, even when that does not reflect the entire nature of the considered system. Examples include systems of exponential growth or exponential decay, or systems that involve subtle interaction among subsystems whose behaviour cannot be predicted by assuming "more of $$x$$ means (proportionally) more of $$y$$".
@@ -39,7 +39,7 @@ This is a recursive step. In other words, the exponents in the multi-set represe
 
 <p style="text-align: center">
 $$19845 \equiv$$
-<img src="/images/primes_tree.png"/>
+<img src="/images/posts/primes_tree.png"/>
 </p>
 
 The root has no label since it serves merely to group the top-most labelled nodes. All nodes below the root are labelled with prime numbers. So the following function reconstructs the natural number that a given prime number tree expresses. It takes a node $$x$$ as an input and exponentiates $$x$$'s label by the product of the values of $$x$$'s subtrees, which are calculated recursively.
