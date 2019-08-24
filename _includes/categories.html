@@ -2,8 +2,8 @@
               <div class="left-blog">
                 <h4>categories</h4>
                 <ul>
-{% assign allcategories = site.note | map:'categories' | join:',' | split:',' | group_by:'category' %}
-{% for category in allcategories %}
+<!--assign allcategories = site.note | map:'categories' | join:',' | split:',' | group_by:'category'-->
+{% for category in site.categories %}
                     <li>
                       <a href="#">{{ category.name }} ({{ category.size }})</a>
                     </li>

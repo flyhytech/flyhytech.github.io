@@ -3,8 +3,8 @@
                 <div class="popular-tag left-side-tags left-blog">
                   <h4>popular tags</h4>
                   <ul>	  
-{% assign alltags = site.note | map:'tags' | join:',' | split:',' | group_by:'tag' %}
-{% for tag in alltags %}
+<!-- assign alltags = site.note | map:'tags' | join:',' | split:',' | group_by:'tag' -->
+{% for tag in site.tags %}
                     <li>
                       <a href="#">{{ tag.name }} ({{ tag.size }})</a>
                     </li>
