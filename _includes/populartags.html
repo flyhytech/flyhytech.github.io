@@ -2,13 +2,27 @@
               <div class="left-tags blog-tags">
                 <div class="popular-tag left-side-tags left-blog">
                   <h4>popular tags</h4>
-                  <ul>	  
-<!-- assign alltags = site.note | map:'tags' | join:',' | split:',' | group_by:'tag' -->
-<!-- for tag in site.tags -->
+                  <ul>
+{% capture tag_sizes %}{% for tag in site.tags %}{{ tag[1].size | plus: -10000 }} {{ tag[0] }}^{% endfor %}{% endcapture %}
+{% assign tags_sorted_by_number_of_posts = tag_sizes | split: '^' | sort %}
+{% for pre_processed_tag in tags_sorted_by_number_of_posts %}
+  {% assign tag_with_size = pre_processed_tag | split: ' ' %}
+  {% assign key = tag_with_size[1] %}
+  {% assign tag = site.tags[key] %}
+  {% unless forloop.first %}</ul>{% endunless %}
+  {% if tag.size > 0 %}
+    {% assign thetag = site.my_tags | where: "slug", key %}
+    {% assign thetag = thetag[0] %}
                     <li>
-                      <a href="#">{{ tag.name }} ({{ tag.size }})</a>
+                      <a href="#">{{ thetag_titlel }} ({{ tag.size }})</a>
                     </li>
-<!-- end for -->
+  {% endif %}
+{% endfor %}
+<!--
+                    <li>
+                      <a href="#">empty</a>
+                    </li>
+-->
                   </ul>
                 </div>
               </div>
