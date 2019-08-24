@@ -2,14 +2,9 @@
               <div class="left-blog">
                 <h4>categories</h4>
                 <ul>
-{% capture cat_sizes %}{% for cat in site.categories %}{{ cat[1].size | plus: -10000 }} {{ cat[0] }}^{% endfor %}{% endcapture %}
-{% assign cats_sorted_by_number_of_posts = cat_sizes | split: '^' | sort %}
-{% for pre_processed_cat in cats_sorted_by_number_of_posts %}
-  {% assign cat_with_size = pre_processed_cat | split: ' ' %}
-  {% assign key = cat_with_size[1] %}
-  {% assign cat = site.categories[key] %}
+{% for category in site.categories %}
                     <li>
-                      <a href="#">{{ key }} ({{ cat.size }})</a>
+                      <a href="#">{{ category }}</a>
                     </li>
 {% end for %}
                 </ul>
