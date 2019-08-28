@@ -3,10 +3,16 @@
                 <h4>categories</h4>
                 <ul>
                     <li>
-                      <a href="#">category1</a>
-                      <a href="#">category2</a>
-                      <a href="#">category3</a>
-                      <a href="#">category4</a>
+{% capture tag_sizes %}{% for tag in site.categories %}{{ tag[1].size | plus: -10000 }} {{ tag[0] }}^{% endfor %}{% endcapture %}
+{% assign tags_sorted_by_number_of_posts = tag_sizes | split: '^' | sort %}
+{% for pre_processed_tag in tags_sorted_by_number_of_posts %}
+  {% assign tag_with_size = pre_processed_tag | split: ' ' %}
+  {% assign key = tag_with_size[1] %}
+  {% assign tag = site.tags[key] %}
+                    <li>
+                      <a href="#">{{ key }} ({{ tag.size }})</a>
+                    </li>
+{% endfor %}
                     </li>
                 </ul>
               </div>
