@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World
-cats: [Misc, special]
+categories: [Misc, special]
 tags: [gosh, ok]
 mainimage: /images/posts/config.png
 ---

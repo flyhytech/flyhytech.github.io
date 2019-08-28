@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Oh, My Gosh
-cats: [nothing, special]
+categories: [nothing, special]
 tags: [oh, my, gosh]
 mainimage: /images/posts/zeta_polar.png
 ---
