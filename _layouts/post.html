@@ -13,15 +13,16 @@ layout: default
                   <h2>Blog image post layout</h2>
                   <div class="entry-meta">
                     <!--<span class="author-meta"><i class="fa fa-user"></i> <a href="#">admin</a></span>-->
-                    <span><i class="fa fa-clock-o"></i>{{ post.date | date: "%e %B %Y" }}</span>
+                    <span><i class="fa fa-clock-o"></i>{{ page.date | date: "%e %B %Y" }}</span>
                     <span class="tag-meta">
                       <i class="fa fa-folder-o"></i>
-                      <a href="#">category1</a>,
-					  <a href="#">category2</a>
+{% for category in page.categories %}
+                      <a href="#">{{ category }}</a>
+{% endfor %}
                       </span>
                     <span>
                       <i class="fa fa-tags"></i>
-{% for tag in post.tags %}
+{% for tag in page.tags %}
                       <a href="#">{{ tag }}</a>,
 {% endfor %}
                     </span>
@@ -44,12 +45,11 @@ layout: default
                       <li class="threaded-comments">
                         <div class="comments-details">
                           <div class="comments-list-img">
-                            <img src="img/blog/b02.jpg" alt="post-author">
+                            <img src="/bm/img/blog/b02.jpg" alt="post-author">
                           </div>
                           <div class="comments-content-wrap">
                             <span>
-                            <b><a href="#">demo</a></b>
-                            Post author
+                            <b><a href="#">user1</a></b>
                             <span class="post-time">October 6, 2014 at 4:25 pm</span>
                             <a href="#">Reply</a>
                             </span>
@@ -60,12 +60,11 @@ layout: default
                       <li>
                         <div class="comments-details">
                           <div class="comments-list-img">
-                            <img src="img/blog/b02.jpg" alt="post-author">
+                            <img src="/bm/img/blog/b02.jpg" alt="post-author">
                           </div>
                           <div class="comments-content-wrap">
                             <span>
-                            <b><a href="#">admin</a></b>
-                            Post author
+                            <b><a href="#">user2</a></b>
                             <span class="post-time">October 6, 2014 at 6:18 pm </span>
                             <a href="#">Reply</a>
                             </span>
@@ -76,12 +75,11 @@ layout: default
                       <li class="threaded-comments">
                         <div class="comments-details">
                           <div class="comments-list-img">
-                            <img src="img/blog/b02.jpg" alt="post-author">
+                            <img src="/bm/img/blog/b02.jpg" alt="post-author">
                           </div>
                           <div class="comments-content-wrap">
                             <span>
-                            <b><a href="#">demo</a></b>
-                            Post author
+                            <b><a href="#">user1</a></b>
                             <span class="post-time">October 6, 2014 at 7:25 pm</span>
                             <a href="#">Reply</a>
                             </span>
