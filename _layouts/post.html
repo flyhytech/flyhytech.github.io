@@ -19,7 +19,7 @@ layout: default
                     <span><i class="fa fa-clock-o"></i>{{ post.date | date: "%e %B %Y" }}</span>
                     <span class="tag-meta">
                       <i class="fa fa-folder-o"></i>
-{% for cat in post.categories %}
+{% for cat in post.cats %}
                       <a href="#">{{ cat }}</a>,
 {% end for %}
                       </span>
