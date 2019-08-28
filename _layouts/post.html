@@ -7,7 +7,7 @@ layout: default
               <!-- single-blog start -->
               <article class="blog-post-wrapper">
                 <div class="post-thumbnail">
-                  <img src="img/blog/6.jpg" alt="" />
+                  <img src="/bm/img/blog/6.jpg" alt="" />
                 </div>
                 <div class="post-information">
                   <h2>Blog image post layout</h2>
@@ -16,14 +16,28 @@ layout: default
                     <span><i class="fa fa-clock-o"></i>{{ page.date | date: "%e %B %Y" }}</span>
                     <span class="tag-meta">
                       <i class="fa fa-folder-o"></i>
+{% assign amount = page.categories.size %}
+{% assign forindex = 0 %}
 {% for category in page.categories %}
+  {% assign forindex = forindex | plus:1 %}
+  {% if forindex < amount %}
+                      <a href="#">{{ category }}, </a>
+  {% else %}
                       <a href="#">{{ category }}</a>
+  {% endif %}
 {% endfor %}
                       </span>
                     <span>
                       <i class="fa fa-tags"></i>
+{% assign amount = page.tags.size %}
+{% assign forindex = 0 %}
 {% for tag in page.tags %}
-                      <a href="#">{{ tag }}</a>,
+  {% assign forindex = forindex | plus:1 %}
+  {% if forindex < amount %}
+                      <a href="#">{{ tag }}, </a>
+  {% else %}
+                      <a href="#">{{ tag }}</a>
+  {% endif %}
 {% endfor %}
                     </span>
                     <span><i class="fa fa-comments-o"></i> <a href="#comments">6 comments</a></span>
