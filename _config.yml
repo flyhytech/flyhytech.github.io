@@ -49,6 +49,17 @@ url:
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+compress_html:
+    clippings: []
+    comments: []
+    endings: []
+    ignore:
+    envs: []
+    blanklines: false
+    profile: false
+    startings: []
+    
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
