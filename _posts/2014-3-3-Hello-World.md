@@ -4,6 +4,7 @@ title: Hello World
 categories: [Misc, special]
 tags: [gosh, ok]
 mainimage: /images/posts/config.png
+description: "This is a pretty awesome page."
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).

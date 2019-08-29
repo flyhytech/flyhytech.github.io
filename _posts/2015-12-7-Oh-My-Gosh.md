@@ -4,6 +4,7 @@ title: Oh, My Gosh
 categories: [nothing, special]
 tags: [oh, my, gosh]
 mainimage: /images/posts/zeta_polar.png
+description: This page needs a lot of work.
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
